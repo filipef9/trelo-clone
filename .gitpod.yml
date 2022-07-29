@@ -1,0 +1,26 @@
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - wakatime.vscode-wakatime
+    - johnpapa.winteriscoming
+    - vscode-icons-team.vscode-icons
+    - esbenp.prettier-vscode
+    - naumovs.color-highlight
+    - dsznajder.es7-react-js-snippets
+    - asciidoctor.asciidoctor-vscode
+    - jpoissonnier.vscode-styled-components
+
+tasks:
+- name: Configure ENV WDS_SOCKET_PORT
+  command: echo -e "WDS_SOCKET_PORT=0" > ${GITPOD_REPO_ROOT}/.env
+- name: 'Frontend: start'
+  command: |
+    npm i
+    npm start
+
+ports:
+  - port: 3000 # frontend
+    visibility: public
+    onOpen: open-preview

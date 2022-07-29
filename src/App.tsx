@@ -1,6 +1,16 @@
 import React from 'react';
+import { AppContainer, CardContainer, ColumnContainer, ColumnTitle } from './styles';
 
 export const App = () => {
-  return null
+  return (
+    <AppContainer>
+      <ColumnContainer>
+        <ColumnTitle>Todo:</ColumnTitle>
+        <CardContainer>FirstItem</CardContainer>
+        <CardContainer>SecondItem</CardContainer>
+        <CardContainer>ThirdItem</CardContainer>
+      </ColumnContainer>
+    </AppContainer>
+  )
 }
 

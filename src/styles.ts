@@ -34,3 +34,24 @@ export const CardContainer = styled.div`
   border-radius: 3px;
   box-shadow: #091e4240 0 1px 0 0;
 `
+
+type AddItemButtonProps = {
+  dark?: boolean
+}
+
+export const AddItemButton = styled.button<AddItemButtonProps>`
+  background-color: #ffffff3d;
+  border-radius: 3px;
+  border: none;
+  color: ${({ dark }) => (dark ? '#000' : '#fff')};
+  cursor: pointer;
+  max-width: 300px;
+  padding: 10px 12px;
+  text-align: left;
+  transition: background 85ms ease-in;
+  width: 100%auto;
+
+  &:hover {
+    background-color: #ffffff52;
+  }
+`

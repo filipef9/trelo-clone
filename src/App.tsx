@@ -1,6 +1,6 @@
 import { AddNewItem } from './AddNewItem';
 import { Column } from './Column';
-import { AppContainer, ColumnContainer } from './styles';
+import { AppContainer } from './styles';
 
 export const App = () => {
   return (
